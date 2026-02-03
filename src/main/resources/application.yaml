@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/autoflow
+    username: postgres
+    password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+app:
+  jwt:
+    secret: "THIS_IS_A_DEMO_SECRET_CHANGE_ME_1234567890_ABCDEFGHIJ"
+    expiration: 86400000  # 1 gün (ms)
+
+huggingface:
+  apiKey: ${HF_API_KEY}
+
+
+
